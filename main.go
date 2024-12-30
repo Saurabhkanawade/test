@@ -33,9 +33,9 @@ func main() {
 
 	switch {
 	case *list:
-		for _, item := range *l {
+		for i, item := range *l {
 			if !item.Done {
-				fmt.Println(item.Task)
+				fmt.Println(i+1, item.Task)
 			}
 		}
 	case *complete > 0:
